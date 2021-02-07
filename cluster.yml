@@ -1,0 +1,28 @@
+---
+
+nodes:
+  - address: 192.168.33.10
+    user: vagrant
+    role: [controlplane]
+    ssh_key_path: ~/.ssh/id_rsa
+  - address: 192.168.33.11
+    user: vagrant
+    role: [etcd]
+    ssh_key_path: ~/.ssh/id_rsa
+  - address: 192.168.33.12
+    user: vagrant
+    role: [worker]
+    ssh_key_path: ~/.ssh/id_rsa
+services:
+  etcd:
+    image: quay.io/coreos/etcd:latest
+  kube-api:
+    image: rancher/k8s:v1.8.3-rancher2
+  kube-controller:
+    image: rancher/k8s:v1.8.3-rancher2
+  scheduler:
+    image: rancher/k8s:v1.8.3-rancher2
+  kubelet:
+    image: rancher/k8s:v1.8.3-rancher2
+  kubeproxy:
+    image: rancher/k8s:v1.8.3-rancher2
