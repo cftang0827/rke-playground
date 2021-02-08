@@ -13,6 +13,10 @@ nodes:
     user: vagrant
     role: [worker]
     ssh_key_path: ~/.ssh/id_rsa
+  - address: 192.168.33.13
+    user: vagrant
+    role: [worker]
+    ssh_key_path: ~/.ssh/id_rsa
 services:
   etcd:
     image: quay.io/coreos/etcd:latest
