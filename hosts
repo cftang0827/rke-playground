@@ -1,0 +1,8 @@
+master1  ansible_ssh_host=192.168.33.10 ansible_ssh_port=22
+master2  ansible_ssh_host=192.168.33.11 ansible_ssh_port=22
+master3  ansible_ssh_host=192.168.33.12 ansible_ssh_port=22
+
+[local]
+master1
+master2
+master3
