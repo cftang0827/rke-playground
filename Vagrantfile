@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
     master1.vm.network "private_network", ip: "192.168.33.10"
     master1.vm.provider "virtualbox" do |vb|
       vb.gui = false
-      vb.memory = "1024"
+      vb.memory = "4096"
     end
     master1.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/me.pub"
 
